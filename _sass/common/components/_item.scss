@@ -112,6 +112,7 @@ a > .item__header, a.item__header, .item__header > a {
   & > .item {
     &:not(:first-child) {
       padding-top: map-get($spacers, 4);
+      animation: move-left 0.7s ease-in-out ;
     }
     &:not(:last-child) {
       padding-bottom: map-get($spacers, 4);
