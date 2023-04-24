@@ -96,6 +96,6 @@ useSyncExternalStore
 
 ---
 
-React :star2:
+React-Hook.html :star2:
 
 [![Star This Project](https://img.shields.io/github/stars/kitian616/jekyll-TeXt-theme.svg?label=Stars&style=social)](https://github.com/canyon920/)
