@@ -13,35 +13,54 @@ Hoisting Deep Dive
 var fruits = "사과"
 {
   console.log(fruits)
-  frtuis = "바나나"
+  var frtuis = "바나나"
 }
 ```
 
-그렇다면 let과 const 는 어떤 차이점이 있을까요?
-
-var는 초기의 자바스크립트 구현방식으로 인해 let 과 const 와는 동작 방식이 다릅니다.
-
-var 는 block scope 가 존재하지 않습니다.
+var 는 전역 변수 입니다. 
+Blcok Scope 속성을 무시 합니다.
 
 
-아래와 같이 if 문에 true 를 넣어서 test 를 실행시키면 var에 접근할 수 있습니다.
-하지만 var 를 let으로 바꾼다면 아래의 코드는  Error test is not defined 를 반환하죠.
-```
-if(true){
-  var test = true;
+분명히 var를 적지 않고 변수를 선언할 시에도 마찬가지로 전역 변수로 지정이 됩니다.
+하지만 아래와 같은 문법을 지정하게 되면 사과와 과일이 같이 출력이 됩니다.
+
+
+이것은 단순한 Javascript의 오류로 볼 수 있습니다.
+
+
+```js
+var fruits = "사과"
+{
+  console.log("fruits")
+  frtuis = "과일""  
 }
-alert(test)
 ```
 
-반복문에서도 이는 유사합니다.
+이러한 점을 오류라고 예측할 수 있는 부분은 아래와 같습니다.
+아래와 같은 코드는 참조 오류(Referrence Error) 를 반환 합니다.
 
-```
-for (var i=0; i < 10; i++){
-  // ...
+
+```js 
+let frtuis = "사과"
+{
+  console.log("fruits")
+  fruits ="과일"
 }
-// 반복문이 종료되었지만 이는 여전히 접근 가능한 코드 입니다.
-alert(i)
 ```
+
+Hoisting 은 var에서만 동작하는 것은 아닙니다.
+다만 참조하게 될 경우 참조 오류(Referrence Error)가 발생할 뿐입니다.
+
+이러한 부분을 봤을때 var로 선언을 하든 안하든 그 원시 데이터는 전역변수로 생성이 되고
+var를 선언하지 않고 원시 데이터를 생성하면 그 데이터는 그 하단에 선언된 과일이 같이 출력이 됩니다.
+
+
+var 를 선언하고 안하고의 메모리 스택 부분에서 차이점이 있는 것으로 추측하고 넘어가도록 하겠습니다.
+
+
+이러한 Hoisting은 if문 혹은 for 문과 같은 Scope 속성을 지닌 예약어에서도 똑같이 동작 합니다.
+
+
 
 
 function sayHi(){
@@ -50,20 +69,15 @@ function sayHi(){
   }
   alert(pharse);
 }
-
 sayHi();
+
 alert(pahrse); // Error is not defined;
  
 
- 
-이러한 이유는 원시값과 객체 메모리에 대한 이해를 하면 좀 더 쉽습니다.
 
-let 으로 데이터를 선언했다고 가정해봅니다,.
+# 코드, 데이터, 힙, 스택 으로 알아보는 Hoisting
 
 
-
-
-프로그램이 실행될 때 코드, 데이터, 힙, 스택으로 구분되어 데이터를 저장하고 처리합니다.
 이 때 메모리 영역이 네가지 영역으로 구분되어 데이터를 저장하고 처리하는데 이 때 원시 값도 같이 가져와서, 메모리 공간을 얼마나 사용할지 사전에 정의 합니다.
 Javascript가 실행이 되면서 메모리의 코드 영역에 코드가 저장되어 코드를 해석하고, 메모리 공간을 찾아 선언한 변수의 이름을 붙이며, 우리가 임의로는 수정이 불가능 합니다.  
 
