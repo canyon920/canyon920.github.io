@@ -33,6 +33,36 @@ a > .item__header, a.item__header, .item__header > a {
   color: $text-color-l;
 }
 
+
+.item__content {
+  display: flex;
+  justify-content: center;
+}
+
+article {
+  align-items: center;
+  justify-content: center;
+  /* width: 50px;
+  height: 50px; */
+  border: 1px solid black;
+  margin: 10px;
+  position: relative;
+  animation: move-left 0.7s ease-in-out ;
+  padding: 20px;
+}
+
+
+@keyframes move-left {
+  0% {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
 .item__description {
   &, .article__content {
     font-size: map-get($base, font-size-sm);
