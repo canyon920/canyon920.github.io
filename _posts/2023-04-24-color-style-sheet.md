@@ -8,15 +8,27 @@ CSS는 웹 브라우저의  Color Style Sheet 로 좀 더 새로운 Aniamtion �
 
 
 ```css
-/* index.css  */
+/* p = selectorm && color = property(속성) && blue = property value(속성 값) */
+/* 그리고 color: blue 는 선언으로 부른다. */
+p { 
+  color: blue;
+}
+
 
 ```
-상위 태그가 하위 태그를 감싸는 구조로 HTML 은 이루어져 있으며, 이러한 관계를 계층 관계라고 볼 수 있다.
-가장 상위 태그인 <html> 태그에서 추출된 노드가 바로 DOM 트리의 루트 노드가 된다.
+<html>
+<head></head>
+<body>
+<div class="name"></div>
+<script>
+function App(){
+  let name = document.getElementById(name)
+  document.createWirte("Hellio World")
+}
 
-
-가장 간단한 예제로 넘어가보자.
-
+</script>
+</body>
+</html>
 ```html
 <div>
   <h1> Hello World </h1>
