@@ -28,7 +28,7 @@ key: page-about
 
 ![TeXt Theme](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.jpg)
 
-TeXt is a super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
+안녕하세요. 항상 새로운 것에 호기심을 갖고 적극적으로 개발에 집중하는 프런트엔드 개발자 김동원 입니다. 
 
 ```javascript
 (() => console.log('Hello, World!'))();
