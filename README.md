@@ -1,2 +1,1 @@
-# canyon920.github.io
-Github Blog
+안녕하세요. 항상 호기심많고 긍정적인 프론트엔드 개발자 김동원 입니다 :) 
