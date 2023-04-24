@@ -35,11 +35,10 @@ a > .item__header, a.item__header, .item__header > a {
 
 
 .item__content {
-  display: flex;
   justify-content: center;
 }
 
-article {
+.item {
   align-items: center;
   justify-content: center;
   /* width: 50px;
