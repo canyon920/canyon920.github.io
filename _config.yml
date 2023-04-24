@@ -20,7 +20,7 @@ text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : "https://canyon920.github.io"
 baseurl : # does not include hostname
-title   : Your Site Title
+title   : Canyon Blog 
 description: > # this means to ignore newlines until "Language & timezone"
   Your Site Description
 
