@@ -18,7 +18,7 @@ var fruits = "사과"
 ```
 
 var 는 전역 변수 입니다. 
-Blcok Scope 속성을 무시 합니다.
+Block Scope 속성을 무시 합니다.
 
 
 분명히 var를 적지 않고 변수를 선언할 시에도 마찬가지로 전역 변수로 지정이 됩니다.
@@ -44,7 +44,7 @@ var fruits = "사과"
 let frtuis = "사과"
 {
   console.log("fruits")
-  fruits ="과일"
+  let fruits ="과일"
 }
 ```
 
