@@ -1,5 +1,5 @@
 ---
-title: LifeCycle Hook
+title: React LifeCycle Hook
 tags: React, Functional Hook 
 ---
 
